@@ -1,0 +1,11 @@
+sudo mkdir -p /usr/local/share/i18n/locales
+sudo cp ./i18n/locales/en_SE /usr/local/share/i18n/locales
+sudo cp ./i18n/SUPPORTED /usr/local/share/i18n/SUPPORTED
+
+sudo nano /etc/locale.gen
+# Add to file
+en_SE.UTF-8 UTF-8
+
+sudo locale-gen
+# Configure the new locale and set as default
+sudo dpkg-reconfigure locales
